@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+
+@layer components {
+  .title {
+    @apply font-bold text-[15px] break-all flex items-center gap-1 justify-around
+  }
+
+  .btnStyle {
+    @apply bg-black text-white h-full min-h-[20px] p-3 text-[10px] w-full max-w-[60px]
+  }
+
+  .boxStyle {
+    @apply bg-gray-200 text-black w-full p-3 rounded-[7px] shadow-md
+  }
+}

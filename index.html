@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanban Task Board</title>
+  <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+    rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+</head>
+
+<body class="font-['Poppins']">
+  <nav>
+    <div class="flex justify-between border border-gray-700 p-5 items-center px-1 shadow-sm md:px-12">
+      <h1 class="text-2xl font-bold md:text-4xl">Task Board</h1>
+      <div class="flex gap-4 text-lg md:text-2xl gap-5">
+        <i class="fa-regular fa-bell cursor-pointer"></i>
+        <i class="fa-solid fa-circle-user cursor-pointer"></i>
+        <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+        <span class="moonIcon flex items-center">
+          <i class="fa-regular fa-moon cursor-pointer"></i>
+        </span>
+        <span class="sunIcon items-center flex">
+          <i class="fa-solid fa-sun cursor-pointer"></i>
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex gap-12 mx-auto justify-center my-16 flex-wrap px-5">
+    <div
+      class="main-container bg-gray-100 w-full max-w-[400px] rounded-[10px] flex flex-col gap-5 p-4 border border-green-400 shadow-lg shadow-gray-300">
+      <h1 class="text-4xl font-bold text-gray-600">Todo</h1>
+      <input type="text" placeholder="Enter Task..." class="boxStyle font-semibold text-2xl inputValue required:" />
+      <div class="containerTodo flex gap-5 flex-col min-h-[400px]"></div>
+
+      <div class="mt-auto">
+        <button class="btn bg-green-400 text-white w-full p-3 rounded-[7px] text-2xl">
+          + Add Task
+        </button>
+      </div>
+    </div>
+    <div
+      class="main-container bg-gray-100 w-full max-w-[400px] rounded-[10px] flex flex-col gap-5 p-4 border border-green-400 shadow-lg shadow-gray-300">
+      <h1 class="text-4xl font-bold text-gray-600">Doing</h1>
+      <div class="containerDoing flex gap-5 flex-col min-h-[400px]"></div>
+
+      <div class="mt-auto"></div>
+    </div>
+    <div
+      class="main-container bg-gray-100 w-full max-w-[400px] rounded-[10px] flex flex-col gap-5 p-4 border border-green-400 shadow-lg shadow-gray-300">
+      <h1 class="text-4xl font-bold text-gray-600">Done</h1>
+      <div class="containerDone flex gap-5 flex-col min-h-[400px]"></div>
+
+      <div class="mt-auto"></div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
